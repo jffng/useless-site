@@ -21,19 +21,19 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-      the_post_thumbnail();
+    <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a><br>
+		<?php 
+      /* the_post_thumbnail(); */
 
 			/* the_content( sprintf( */
 			/* 	/1* translators: %s: Name of current post. *1/ */
 			/* 	wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'useless' ), array( 'span' => array( 'class' => array() ) ) ), */
 			/* 	the_title( '<span class="screen-reader-text">"', '"</span>', false ) */
-			/* ) ); */
+      /* ) ); */ ?>
 
-      /* echo the_title('<span class="entry-title">', '</span>'); ?> */ ?>
-        <br>
-     <span><?php echo rwmb_meta('tagline'); ?></span><br>
-     <a href="<?php echo rwmb_meta('link'); ?>">See it</a>
+      <span><?php echo rwmb_meta('tagline'); ?></span><br>
+      <a href="<?php echo get_permalink(); ?>">Read About It</a><br>
+      <a href="<?php echo rwmb_meta('link'); ?>">See It</a>
 
 		<?php
 			wp_link_pages( array(

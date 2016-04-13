@@ -18,6 +18,7 @@ sql-dump-*.sql
 .env
 .env.*
 !.env.example
+*/**/*.swp
 
 # Vendor (e.g. Composer)
 vendor/*
