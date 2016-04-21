@@ -31,9 +31,9 @@
 			/* 	the_title( '<span class="screen-reader-text">"', '"</span>', false ) */
       /* ) ); */ ?>
 
-      <span><?php echo rwmb_meta('tagline'); ?></span><br>
-      <a href="<?php echo get_permalink(); ?>">Read About It</a><br>
-      <a href="<?php echo rwmb_meta('link'); ?>">See It</a>
+      <p><?php echo rwmb_meta('tagline'); ?></p>
+      <div class="thing-link"><a href="<?php echo get_permalink(); ?>">Read About It</a></div>
+      <div class="thing-link"><a href="<?php echo rwmb_meta('link'); ?>">See It</a></div>
 
 		<?php
 			wp_link_pages( array(

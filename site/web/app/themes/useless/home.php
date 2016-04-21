@@ -21,12 +21,23 @@ get_header(); ?>
          * If you want to override this in a child theme, then include a file
          * called content-___.php (where ___ is the Post Format name) and that will be used instead.
          */
-        get_template_part( 'template-parts/content', get_post_format() );
+        ?>
 
+        <div class="newest-thing">
+          <h3 class="label red inline">Newest Thing:</h3>
+          <?php get_template_part( 'template-parts/content', get_post_format() );?>
+        </div>
+        <hr>
+
+      <?php
 			endwhile;
 
       wp_reset_query();
 
+      ?>
+      <div class="previous-things things">
+        <h3><span class="label green">Previous Things:</span></h3>
+      <?php
       /* show the rest of the things */
       $index = 0;
       while ( have_posts() ) : the_post();
@@ -36,6 +47,7 @@ get_header(); ?>
           $index++;
         endif;
 			endwhile;
+      ?></div><?php
 
 			the_posts_navigation();
 

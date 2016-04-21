@@ -226,7 +226,7 @@ input,
 select,
 textarea {
 	color: #000;
-	font-family: "Helvetica Neue" sans-serif;
+	font-family: "Helvetica Neue", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -241,7 +241,8 @@ h6 {
 	clear: both;
 }
 
-p {
+p,span {
+    font-size: 13px;
 	margin-bottom: 1.5em;
 }
 
@@ -295,6 +296,26 @@ ins {
 
 big {
 	font-size: 125%;
+}
+
+.label {
+    display: inline-block;
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 3px 6px;
+    font-weight: normal;
+}
+
+.label.red {
+    background-color: #ff0030;
+}
+
+.label.green {
+    background-color: #2ec83c;
 }
 
 /*--------------------------------------------------------------
@@ -444,7 +465,7 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: #000;
-  text-decoration: underline
+  text-decoration: underline;
 }
 
 a:visited {
@@ -494,9 +515,19 @@ img:hover {
 
 #masthead {
   text-align: center;
+  padding: 40px 0;
 }
 
-#masthead form, #masthead input {
+#masthead input {
+    padding: 1px 4px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: white;
+}
+
+#masthead form {
   text-transform: uppercase;
   font-size: 13px;
 }
@@ -516,6 +547,56 @@ img:hover {
   margin-bottom: 20px;
 }
 
+/*--------------------------------------------------------------
+## Home
+--------------------------------------------------------------*/
+.newest-thing {
+    max-width: 500px;
+}
+
+.newest-thing, .next-thing, .previous-things {
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.newest-thing .entry-title, .next-thing .entry-title, .previous-things .entry-title {
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+.previous-things h3 {
+    margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+## Things
+--------------------------------------------------------------*/
+.things h2 a{
+    text-decoration: none;
+}
+
+.thing-link {
+    font-size: 0;
+    font-weight: bold;
+}
+.thing-link a {
+    font-size: 13px;
+}
+
+.things article {
+    width: 50%; 
+    float: left;
+}
+
+.things article:nth-child(even){
+    padding-right: 30px;
+    text-align: right;
+}
+
+.things article:nth-child(odd){
+    padding-left: 30px;
+    text-align: left;
+}
 
 /*--------------------------------------------------------------
 ## Menus
@@ -750,7 +831,8 @@ img:hover {
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+    margin: 0;
+	/* margin: 0 0 1.5em; */
 }
 
 .byline,
