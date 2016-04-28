@@ -26,6 +26,11 @@ summary {
 	display: block;
 }
 
+article {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 audio,
 canvas,
 progress,
@@ -318,6 +323,10 @@ big {
     background-color: #2ec83c;
 }
 
+.label.blue {
+    background-color: #0d8cff;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -479,6 +488,10 @@ a:active {
   background-color: #000;
 }
 
+a.no-highlight {
+    background-color: white;
+}
+
 a:focus {
 	outline: thin dotted;
 }
@@ -553,6 +566,12 @@ img:hover {
 .newest-thing {
     max-width: 500px;
 }
+.newest-thing article {
+    margin-top: 1rem;
+}
+.next-thing p {
+    margin-bottom: 0;
+}
 
 .newest-thing, .next-thing, .previous-things {
     margin: 0 auto;
@@ -571,6 +590,12 @@ img:hover {
 /*--------------------------------------------------------------
 ## Things
 --------------------------------------------------------------*/
+.page-title {
+    margin-top: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 20px;
+}
 .things h2 a{
     text-decoration: none;
 }
@@ -586,6 +611,7 @@ img:hover {
 .things article {
     width: 50%; 
     float: left;
+    margin-bottom: 24px;
 }
 
 .things article:nth-child(even){
@@ -596,6 +622,30 @@ img:hover {
 .things article:nth-child(odd){
     padding-left: 30px;
     text-align: left;
+}
+
+.things article:nth-last-child(1):nth-child(even){
+    margin: 0 25%;
+    text-align: center;
+}
+
+.single-thing article p {
+    text-align: left;
+    font-size: 15px;
+}
+
+.single-meta {
+    margin-bottom: 20px;
+}
+
+/*--------------------------------------------------------------
+## About
+--------------------------------------------------------------*/
+.about article .entry-header {
+    display: none;
+}
+.about p {
+    font-size: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -831,7 +881,7 @@ img:hover {
 }
 
 .hentry {
-    margin: 0;
+    margin: 0 auto;
 	/* margin: 0 0 1.5em; */
 }
 
@@ -995,5 +1045,6 @@ hr.m {
 hr {
   border:none;
   border-top: 1px solid #ccc;
-  width: 70%;
+  max-width: 650px;
+  /* width: 70%; */
 }

@@ -13,7 +13,7 @@
 	<header class="entry-header">
 		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 
-		<div class="entry-meta">
+		<div class="entry-meta single-meta">
       <?php the_date(); ?><br>
       <span>By <?php $link = rwmb_meta('link'); ?></span>
       <?php echo rwmb_meta('thing_author'); ?><br>

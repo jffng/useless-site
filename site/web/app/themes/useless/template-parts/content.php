@@ -21,7 +21,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-    <a href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a><br>
+    <a class="no-highlight" href="<?php echo get_permalink(); ?>"><?php the_post_thumbnail(); ?></a><br>
 		<?php 
       /* the_post_thumbnail(); */
 

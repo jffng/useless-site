@@ -24,7 +24,7 @@ get_header(); ?>
         ?>
 
         <div class="newest-thing">
-          <h3 class="label red inline">Newest Thing:</h3>
+          <h3 class="label red">Newest Thing:</h3><br>
           <?php get_template_part( 'template-parts/content', get_post_format() );?>
         </div>
         <hr>
@@ -35,6 +35,12 @@ get_header(); ?>
       wp_reset_query();
 
       ?>
+      <div class="next-thing">
+        <h3 class="label blue">Next Thing:</h3><br>
+        <p>6/22/16</p>
+      </div>
+      <hr>
+
       <div class="previous-things things">
         <h3><span class="label green">Previous Things:</span></h3>
       <?php
